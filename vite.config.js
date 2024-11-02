@@ -46,7 +46,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@mixin': path.resolve(__dirname, './src/styles/mixins/mixin.scss'),
+      '@media': path.resolve(__dirname, './src/styles/mixins/media.scss'),
       '@': path.resolve(__dirname, './src'),
     },
   },

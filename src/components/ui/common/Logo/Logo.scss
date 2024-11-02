@@ -1,3 +1,5 @@
+@import '@media';
+
 .logo {
   display: flex;
   align-items: center;
@@ -22,5 +24,11 @@
   &__text {
     font-size: 22px;
     font-weight: 800;
+  }
+
+  @include media-down(sm) {
+    &__text {
+      display: none;
+    }
   }
 }
