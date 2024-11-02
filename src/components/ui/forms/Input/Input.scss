@@ -6,4 +6,21 @@
   border-radius: 5px;
   font-size: 16px;
   background: var(--white);
+  border: 1px solid transparent;
+  color: var(--dark);
+
+  &:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 15px var(--purple-lighter);
+  }
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 15px var(--purple-lighter);
+    }
+  }
 }
