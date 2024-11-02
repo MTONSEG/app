@@ -30,10 +30,6 @@
       "@svg/*": ["./public/svg/*"],
       "@sprites/*": ["./public/sprites/*"],
       "@store/*": ["./src/store/*"],
-      "@imagesGame/*": ["./src/game/assets/images/*"],
-			"@sheetsGame/*": ["./src/game/assets/sheets/*"],
-			"@entitiesGame/*": ["./src/game/assets/entities/*"],
-			"@audioGame/*": ["./src/game/assets/audio/*"]
     }
   },
   "include": ["src", "src/vite-env.d.ts"],
