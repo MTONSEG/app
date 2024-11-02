@@ -1,7 +1,7 @@
 import FormBox from '@/components/ui/forms/FormBox/FormBox'
 import FormWrapper from '@/components/ui/forms/FormWrapper/FormWrapper'
 import Input from '@/components/ui/forms/Input/Input'
-import ProfileFormWrapper from '@/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
+import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
 import { FC } from 'react'
 
 interface PropsType {}

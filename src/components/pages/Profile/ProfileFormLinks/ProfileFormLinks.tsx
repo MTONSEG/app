@@ -1,12 +1,11 @@
 import Button from '@/components/ui/buttons/Button'
 import SocialItem from '@/components/widgets/cards/SocialItem/SocialItem'
-import ProfileFormWrapper from '@/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
+import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
 import { FC } from 'react'
 
 interface PropsType {}
 
 const ProfileFormLinks: FC<PropsType> = () => {
-
   const handleSave = () => {}
 
   return (
@@ -21,8 +20,6 @@ const ProfileFormLinks: FC<PropsType> = () => {
       }
     >
       <SocialItem title='link 1' />
-
-     
     </ProfileFormWrapper>
   )
 }

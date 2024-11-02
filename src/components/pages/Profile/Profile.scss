@@ -20,10 +20,10 @@
 .profile-form-wrapper {
   --footer-height: 70px;
   --padding-bottom: var(--footer-height);
+  overflow: hidden;
   position: relative;
   flex-direction: column;
   padding: 30px 30px var(--padding-bottom);
-  overflow: hidden;
 
   &__head {
     display: grid;

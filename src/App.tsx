@@ -1,7 +1,7 @@
-import Preview from '@/pages/Preview/Preview'
-import Profile from '@/pages/Profile/Profile'
-import ProfileFormDetails from '@/pages/Profile/ProfileFormDetails/ProfileFormDetails'
-import ProfileFormLinks from '@/pages/Profile/ProfileFormLinks/ProfileFormLinks'
+import Preview from '@/components/pages/Preview/Preview'
+import Profile from '@/components/pages/Profile/Profile'
+import ProfileFormDetails from '@/components/pages/Profile/ProfileFormDetails/ProfileFormDetails'
+import ProfileFormLinks from '@/components/pages/Profile/ProfileFormLinks/ProfileFormLinks'
 
 import { Route, Routes } from 'react-router-dom'
 
