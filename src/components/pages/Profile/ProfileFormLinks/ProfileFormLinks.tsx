@@ -15,7 +15,7 @@ const ProfileFormLinks: FC<PropsType> = () => {
       handleSave={handleSave}
       button={
         <Button variant='outlined' isFullWidth>
-          Add new link
+          &#43; Add new link
         </Button>
       }
     >
