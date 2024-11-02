@@ -1,18 +1,18 @@
 import Button from '@/components/ui/buttons/Button'
-import { FC, ReactElement, ReactNode } from 'react'
+import type { DetailedHTMLProps, FC, FormHTMLAttributes, ReactElement, ReactNode } from 'react'
 import '../Profile.scss'
 
-interface PropsType {
+interface PropsType extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
   title: string
   text: string
   children?: ReactNode
-  handleSave?: () => void
   button?: ReactElement<HTMLButtonElement>
+  handleSave?: () => void
 }
 
 const ProfileFormWrapper: FC<PropsType> = ({ title, text, children, button, handleSave }) => {
   return (
-    <div className='profile-form-wrapper'>
+    <form className='profile-form-wrapper'>
       <div className='profile-form-wrapper__head'>
         <h1 className='profile-form-wrapper__title'>{title}</h1>
         <p className='profile-form-wrapper__text'>{text}</p>
@@ -25,7 +25,7 @@ const ProfileFormWrapper: FC<PropsType> = ({ title, text, children, button, hand
       <div className='profile-form-wrapper__footer'>
         <Button onClick={handleSave}>Save</Button>
       </div>
-    </div>
+    </form>
   )
 }
 
