@@ -1,6 +1,6 @@
+import PlaceholderIcon from '@icons/placeholder-image.svg?react'
 import type { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
 import './InputFile.scss'
-import PlaceholderIcon from '@icons/placeholder-image.svg?react'
 
 type InputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 interface PropsType extends Omit<InputPropsType, 'type'> {
