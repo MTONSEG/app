@@ -5,6 +5,7 @@ import { useActions } from '@/hooks/redux/useActions'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { FC } from 'react'
 import './SocialItem.scss'
+import FormBox from '@/components/ui/forms/FormBox/FormBox'
 
 interface PropsType {
   title: string
@@ -20,7 +21,7 @@ const SocialItem: FC<PropsType> = () => {
   }
 
   return (
-    <div className='social-item'>
+    <FormBox className='social-item'>
       <div className='social-item__head'>
         <p className='social-item__title'>Link #1</p>
 
@@ -34,7 +35,7 @@ const SocialItem: FC<PropsType> = () => {
       <FormWrapper title='Link'>
         <Input />
       </FormWrapper>
-    </div>
+    </FormBox>
   )
 }
 
