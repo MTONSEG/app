@@ -8,16 +8,16 @@ interface PropsType {}
 const ProfileFormFields: FC<PropsType> = () => {
   return (
     <FormBox>
-      <FormWrapper title='First Name*' variant='flex'>
-        <Input type='text' name='firstName' aria-label='first name' placeholder='Enter your first name'/>
+      <FormWrapper title='First Name*' variant='grid'>
+        <Input type='text' name='firstName' aria-label='first name' placeholder='Enter your first name' />
       </FormWrapper>
 
-      <FormWrapper title='Last Name*' variant='flex'>
-        <Input type='text' name='lastName' aria-label='last name' placeholder='Enter your last name'/>
+      <FormWrapper title='Last Name*' variant='grid'>
+        <Input type='text' name='lastName' aria-label='last name' placeholder='Enter your last name' />
       </FormWrapper>
 
-      <FormWrapper title='Email' variant='flex'>
-        <Input type='email' name='email' aria-label='email' placeholder='Enter your Email'/>
+      <FormWrapper title='Email' variant='grid'>
+        <Input type='email' name='email' aria-label='email' placeholder='Enter your Email' />
       </FormWrapper>
     </FormBox>
   )

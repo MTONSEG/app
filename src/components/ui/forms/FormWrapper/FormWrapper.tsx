@@ -4,7 +4,7 @@ import './FormWrapper.scss'
 interface PropsType extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   title: string
   children: ReactNode
-  variant?: 'default' | 'flex'
+  variant?: 'default' | 'grid'
 }
 
 const FormWrapper: FC<PropsType> = ({ children, title, variant = 'default', ...props }) => {

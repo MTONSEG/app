@@ -34,7 +34,7 @@ const ProfileFormFile: FC<PropsType> = () => {
 
   return (
     <FormBox>
-      <FormWrapper title='Profile picture' variant='flex'>
+      <FormWrapper title='Profile picture' variant='grid'>
         <InputFile
           name='photo'
           text='Image must be below 1024x1024px. Use PNG, JPG, or BMP format'

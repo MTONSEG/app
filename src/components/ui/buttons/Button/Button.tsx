@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from 'react'
+import type { ButtonHTMLAttributes, DetailedHTMLProps, FC } from 'react'
 import './Button.scss'
 
 interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
