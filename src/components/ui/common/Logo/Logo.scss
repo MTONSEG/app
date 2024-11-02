@@ -1,0 +1,26 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon-wrap {
+    width: 30px;
+    height: 30px;
+    background: var(--purple);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--white);
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 800;
+  }
+}

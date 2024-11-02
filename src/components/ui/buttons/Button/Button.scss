@@ -5,9 +5,9 @@
   gap: 10px;
   min-width: 80px;
   min-height: 40px;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--white);
   background-color: var(--purple);
@@ -21,6 +21,22 @@
 
   &--full-width {
     width: 100%;
+  }
+
+  &--icon-mobile,
+  &--icon-mobile-only {
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--grey);
+      stroke: var(--grey);
+    }
+  }
+
+  &--icon-mobile {
+  }
+
+  &--icon-mobile-only {
   }
 
   &:focus {

@@ -1,4 +1,4 @@
-import Button from '@/components/ui/buttons/Button'
+import Button from '@/components/ui/buttons/Button/Button'
 import SocialItem from '@/components/widgets/cards/SocialItem/SocialItem'
 import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
 import { FC } from 'react'

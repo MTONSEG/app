@@ -1,4 +1,4 @@
-import Button from '@/components/ui/buttons/Button'
+import Button from '@/components/ui/buttons/Button/Button'
 import type { DetailedHTMLProps, FC, FormHTMLAttributes, ReactElement, ReactNode } from 'react'
 import '../Profile.scss'
 

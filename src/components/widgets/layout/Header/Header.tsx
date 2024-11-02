@@ -1,23 +1,31 @@
+import Logo from '@/components/ui/common/Logo/Logo'
+import EyeIcon from '@icons/eye.svg?react'
+import LinkIcon from '@icons/link.svg?react'
+import ProfileIcon from '@icons/profile.svg?react'
 import { FC } from 'react'
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
-import { Link, NavLink } from 'react-router-dom'
-import Button from '@/components/ui/buttons/Button'
 
 interface PropsType {}
 
 const Header: FC<PropsType> = () => {
   return (
     <header className='header'>
-      <div className='header__logo-wrap'>
-        <img width={100} height={40} src='https://urgent.in.ua/build/assets/icons/logo-black.svg' alt='urgent' className='header__logo' />
-      </div>
+      <Logo />
 
       <div className='header__link-wrap'>
-        <NavLink to={'/profile'} className='header__link' end>Links</NavLink>
-        <NavLink to={'/profile/details'} className='header__link' end>Profile Details</NavLink>
+        <NavLink to={'/profile'} className='header__link' end>
+          <LinkIcon /> <span>Links</span>
+        </NavLink>
+
+        <NavLink to={'/profile/details'} className='header__link' end>
+          <ProfileIcon /> <span>Profile Details</span>
+        </NavLink>
       </div>
 
-      <Button className='header__preview-btn' variant='outlined'>Preview</Button>
+      <NavLink to={'/'} className='header__link header__link--preview'>
+        <EyeIcon /> <span>Preview</span>
+      </NavLink>
     </header>
   )
 }

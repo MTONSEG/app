@@ -21,15 +21,45 @@
     min-height: 40px;
     padding: 5px 15px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--gray);
     transition: all 0.2s;
+
+    svg {
+      width: 18px;
+      height: 20px;
+      fill: var(--gray);
+      stroke: var(--gray);
+      transition: all 0.2s;
+      margin: 0 10px 0 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 15px var(--purple-lighter);
+    }
 
     &.active {
       pointer-events: none;
       color: var(--purple-darkest);
       background: var(--purple-lighter);
+
+      svg {
+        width: 18px;
+        height: 20px;
+        fill: var(--purple-darkest);
+        stroke: var(--purple-darkest);
+      }
+    }
+
+    &--preview {
+      border: 1px solid var(--purple-darkest);
+      color: var(--purple-darkest);
+
+      svg {
+        display: none;
+        stroke: var(--purple-darkest);
+      }
     }
 
     @media (hover: hover) {
