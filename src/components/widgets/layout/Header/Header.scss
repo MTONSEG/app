@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  padding: 15px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 0 10px lightgrey;
+
+  &__link-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray);
+    transition: all 0.2s;
+
+    &.active {
+      pointer-events: none;
+      color: var(--purple-darkest);
+      background: var(--purple-lighter);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--purple-lightest);
+      }
+    }
+  }
+}

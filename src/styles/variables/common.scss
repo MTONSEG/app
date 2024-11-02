@@ -1,0 +1,6 @@
+:root {
+  --header-height: 70px;
+  --layout-gap: 15px;
+  --layout-padding: 15px;
+  --body-height: calc(100vh - var(--header-height) - var(--layout-gap) - (var(--layout-padding)) * 2);
+}

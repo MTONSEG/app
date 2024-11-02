@@ -1,0 +1,27 @@
+.social-item {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--gray-bg);
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: var(--gray);
+  }
+
+  &__btn {
+    padding: 5px 0;
+    font-weight: 500;
+    color: var(--gray);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--social-red);
+      }
+    }
+  }
+}

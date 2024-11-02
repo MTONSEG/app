@@ -1,0 +1,11 @@
+.form-wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(100px, 0.3fr) 1fr;
+  gap: 10px;
+
+  &__label {
+    font-weight: 500;
+    color: var(--gray);
+  }
+}

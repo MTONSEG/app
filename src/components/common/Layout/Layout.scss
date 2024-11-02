@@ -1,0 +1,7 @@
+.layout {
+  display: grid;
+  grid-template-rows: var(--header-height) var(--body-height);
+  gap: var(--layout-gap);
+  height: 100vh;
+  padding: var(--layout-padding);
+}

@@ -1,0 +1,51 @@
+{
+  "name": "elon_mars",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@reduxjs/toolkit": "^2.3.0",
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.7.2",
+    "npm": "^10.8.3",
+    "postcss-preset-env": "^9.5.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.27.0",
+    "uuid": "^10.0.0",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "prettier": "3.3.3",
+    "sass": "^1.79.4",
+    "stylelint": "^16.8.2",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-webfont-dl": "^3.9.4",
+    "vite-tsconfig-paths": "^4.3.2"
+  }
+}

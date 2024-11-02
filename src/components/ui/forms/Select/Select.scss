@@ -1,0 +1,61 @@
+.select__head,
+.select-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: black;
+  background: var(--white);
+}
+
+.select-option {
+  cursor: pointer;
+  border-bottom: 1px solid lightgray;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &.is-select {
+    pointer-events: none;
+    border-color: transparent;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--purple-darkest);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: transparent;
+      color: var(--white);
+      background: var(--purple);
+    }
+  }
+}
+
+.select {
+  position: relative;
+
+  &__head,
+  &__options {
+    border: 1px solid var(--gray-light);
+    border-radius: 5px;
+  }
+
+  &__options {
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    display: none;
+    width: 100%;
+    max-height: 120px;
+    background: var(--white);
+  }
+
+  &.active {
+    & .select__options {
+      display: block;
+    }
+  }
+}
