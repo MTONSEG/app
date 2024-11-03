@@ -25,5 +25,9 @@
     --layout-gap: 10px;
     --hero-min-height: 190px;
     --hero-max-height: 30vh;
+
+    &__hero {
+      border-radius: 0 0 20% 20%;
+    }
   }
 }

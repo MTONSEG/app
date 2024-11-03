@@ -5,9 +5,8 @@
   border: 1px solid var(--gray-light);
   border-radius: 5px;
   font-size: 16px;
-  background: var(--white);
-  border: 1px solid transparent;
   color: var(--dark);
+  background: var(--white);
 
   &:focus {
     border-color: var(--purple);

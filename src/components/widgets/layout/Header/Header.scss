@@ -12,9 +12,9 @@
   min-height: var(--header-height);
   padding: 15px;
   border-radius: 15px;
-  background: white;
+  background: var(--white);
   transform: translateX(-50%);
-  box-shadow: 0 0 10px lightgrey;
+  box-shadow: 0 0 10px var(--shadow-light-gray);
 
   @include media-down(sm) {
     --header-height: 60px;

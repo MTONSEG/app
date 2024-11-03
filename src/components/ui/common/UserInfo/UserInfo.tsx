@@ -1,6 +1,6 @@
+import Skeleton from '@/components/ui/common/Skeleton/Skeleton'
 import { FC } from 'react'
 import './UserInfo.scss'
-import Skeleton from '@/components/ui/common/Skeleton/Skeleton'
 
 interface PropsType {
   name?: string

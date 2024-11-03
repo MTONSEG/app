@@ -25,27 +25,4 @@
       object-fit: contain;
     }
   }
-
-  &--card {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    padding: 40px;
-    border-radius: 15px;
-    background: var(--white);
-    box-shadow: 0 0 25px var(--gray-lightest);
-
-    & .phone-preview__user-info {
-      margin: 0 0 45px;
-    }
-
-    & .phone-preview__phone-svg {
-      display: none;
-    }
-
-    & .phone-preview__social-wrap {
-      max-width: 250px;
-      margin: 0 0 auto;
-    }
-  }
 }

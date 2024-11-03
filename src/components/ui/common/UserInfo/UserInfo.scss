@@ -1,3 +1,5 @@
+@import '@media';
+
 .user-info {
   display: flex;
   align-items: center;
@@ -28,11 +30,13 @@
 
   &--md {
     & .user-info__name {
-      font-size: 22px;
+      font-size: 28px;
+      font-weight: 800;
     }
 
     & .user-info__email {
       font-size: 18px;
+      font-weight: 500;
     }
   }
 }
