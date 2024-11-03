@@ -17,7 +17,7 @@ const Preview: FC<PropsType> = () => {
       <PreviewHeader />
 
       <main className='preview__hero'>
-        <PreviewCard>
+        <PreviewCard className='preview__card'>
           <UserInfoContainer>
             <Avatar size='md' imageSrc='https://picsum.photos/200/300' />
             <UserInfo size='md' name='Max Puzanov' email='test@gmail.com' />

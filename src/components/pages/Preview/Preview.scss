@@ -1,11 +1,29 @@
+@import '@media';
+
 .preview {
+  --hero-min-height: 220px;
+  --hero-max-height: 40vh;
   position: relative;
+  padding: 0 0 20px;
 
   &__hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 40px 50px;
+    height: max(var(--hero-max-height), var(--hero-min-height));
+    margin: 0 0 20px;
+    padding: 0 15px 20px;
+    border-radius: 0 0 30px 30px;
     background: var(--purple);
+  }
+
+  &__card {
+    transform: translateY(50%);
+  }
+
+  @include media-down(sm) {
+    --layout-gap: 10px;
+    --hero-min-height: 190px;
+    --hero-max-height: 30vh;
   }
 }

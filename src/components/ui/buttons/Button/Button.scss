@@ -15,11 +15,14 @@
   background-color: var(--purple);
   transition: all 0.2s;
 
+  &:focus {
+    box-shadow: 0 0 15px var(--purple-lighter);
+  }
+
   svg {
     width: 20px;
     height: 20px;
-    fill: var(--purple);
-    stroke: var(--purple);
+    fill: var(--white);
     transition: all 0.2s;
   }
 
@@ -27,14 +30,25 @@
     border: 1px solid var(--purple);
     color: var(--purple);
     background: transparent;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--purple);
+      transition: all 0.2s;
+    }
   }
 
   &--full-width {
     width: 100%;
   }
 
-  &:focus {
-    box-shadow: 0 0 15px var(--purple-lighter);
+  &--mobile-view {
+    min-width: 50px;
+
+    svg {
+      display: none;
+    }
   }
 
   @media (hover: hover) {
@@ -43,7 +57,6 @@
 
       svg {
         fill: var(--white);
-        stroke: var(--white);
       }
     }
 
@@ -59,6 +72,10 @@
   @include media-down(sm) {
     &--mobile-view {
       min-width: 50px;
+
+      svg {
+        display: block;
+      }
 
       span {
         display: none;
