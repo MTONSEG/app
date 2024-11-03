@@ -25,7 +25,10 @@ const SocialItem: FC<PropsType> = () => {
   return (
     <FormBox className='social-item'>
       <div className='social-item__head'>
-        <p className='social-item__title'>Link #1</p>
+        <p className='social-item__title'>
+          <button type='button' className='social-item__drag-btn' />
+          <span>Link #1</span>
+        </p>
 
         <button className='social-item__btn'>Remove</button>
       </div>

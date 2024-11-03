@@ -3,7 +3,9 @@
   border-radius: 10px;
   background-color: var(--gray-bg);
 
-  &__head {
+  &__head,
+  &__title,
+  &__drag-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +16,36 @@
     color: var(--gray);
   }
 
+  &__drag-btn {
+    width: 24px;
+    height: 30px;
+    position: relative;
+    margin: 0 3px 0 0;
+
+    &::after,
+    &::before {
+      content: '';
+      width: calc(100% - 8px);
+      height: 2px;
+      display: block;
+      background: var(--gray);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      transform: translate(-50%, calc(-50% - 3px));
+    }
+
+    &::before {
+      transform: translate(-50%, calc(-50% + 3px));
+    }
+  }
+
   &__btn {
+    font-size: 16px;
     padding: 5px 0;
     font-weight: 500;
     color: var(--gray);
