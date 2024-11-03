@@ -1,0 +1,85 @@
+.social-btn,
+.social-btn__body {
+  display: flex;
+  align-items: center;
+}
+
+.social-btn {
+  position: relative;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+
+  svg,
+  &__icon,
+  &__arrow-icon {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__arrow-icon,
+  &__icon {
+    fill: var(--black);
+  }
+
+  &__icon {
+    margin: 0 6px 2px 0;
+  }
+
+  &__arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--with-arrow {
+    padding-right: 40px;
+  }
+
+  &--github,
+  &--youtube,
+  &--linkedin {
+    color: var(--white);
+
+    svg {
+      fill: var(--white);
+      stroke: var(--white);
+    }
+  }
+
+  &--github {
+    background: var(--social-black);
+  }
+
+  &--youtube {
+    background: var(--social-red);
+  }
+
+  &--linkedin {
+    background: var(--social-blue);
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+
+      & .social-btn__arrow-icon {
+        transform: translate(5px, -50%);
+      }
+    }
+  }
+}
