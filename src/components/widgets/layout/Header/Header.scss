@@ -1,17 +1,12 @@
 @import '@media';
 
-.header,
-.header__link,
-.header__link-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .header {
   position: fixed;
   top: var(--layout-gap);
   left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 11;
   width: calc(100% - 30px);
   min-height: var(--header-height);
@@ -21,79 +16,8 @@
   transform: translateX(-50%);
   box-shadow: 0 0 10px lightgrey;
 
-  &__link-wrap {
-    gap: 5px;
-  }
-
-  &__link {
-    min-height: 40px;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--gray);
-    transition: all 0.2s;
-
-    svg {
-      flex: 0 0 auto;
-      width: 18px;
-      height: 20px;
-      margin: 0 10px 0 0;
-      fill: var(--gray);
-      stroke: var(--gray);
-      transition: all 0.2s;
-    }
-
-    &:focus {
-      box-shadow: 0 0 15px var(--purple-lighter);
-    }
-
-    &--preview {
-      border: 1px solid var(--purple-darkest);
-      color: var(--purple-darkest);
-
-      svg {
-        display: none;
-        stroke: var(--purple-darkest);
-      }
-    }
-
-    &.active {
-      pointer-events: none;
-      color: var(--purple-darkest);
-      background: var(--purple-lighter);
-
-      svg {
-        width: 18px;
-        height: 20px;
-        fill: var(--purple-darkest);
-        stroke: var(--purple-darkest);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background: var(--purple-lightest);
-      }
-    }
-  }
-
   @include media-down(sm) {
     --header-height: 60px;
     padding: 10px;
-
-    &__link {
-      width: 50px;
-      min-height: 35px;
-
-      span {
-        display: none;
-      }
-
-      svg {
-        display: block;
-        margin: 0;
-      }
-    }
   }
 }

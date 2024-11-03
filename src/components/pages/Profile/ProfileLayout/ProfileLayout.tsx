@@ -1,7 +1,7 @@
-import Header from '@/components/widgets/layout/Header/Header'
+import ProfileHeader from '@/components/pages/Profile/ProfileHeader/ProfileHeader'
 import { useVhFix } from '@/hooks/common/useVhFix'
 import { FC, ReactNode } from 'react'
-import './ProfileLayout.scss'
+import '../Profile.scss'
 
 interface PropsType {
   children: ReactNode
@@ -12,7 +12,8 @@ const ProfileLayout: FC<PropsType> = ({ children }) => {
 
   return (
     <div className='profile-layout' style={{ height: 'calc(100 * var(--vh)' }}>
-      <Header />
+      <ProfileHeader />
+
       {children}
     </div>
   )

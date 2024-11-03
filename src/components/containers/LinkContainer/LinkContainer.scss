@@ -1,0 +1,68 @@
+@import '@media';
+
+.link-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray);
+    transition: all 0.2s;
+
+    svg {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 20px;
+      margin: 0 10px 0 0;
+      fill: var(--gray);
+      stroke: var(--gray);
+      transition: all 0.2s;
+    }
+
+    &:focus {
+      box-shadow: 0 0 15px var(--purple-lighter);
+    }
+
+    &.active {
+      pointer-events: none;
+      color: var(--purple-darkest);
+      background: var(--purple-lighter);
+
+      svg {
+        width: 18px;
+        height: 20px;
+        fill: var(--purple-darkest);
+        stroke: var(--purple-darkest);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--purple-lightest);
+      }
+    }
+  }
+
+  @include media-down(sm) {
+    &__link {
+      width: 50px;
+      min-height: 35px;
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+}
