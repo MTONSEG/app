@@ -7,8 +7,34 @@
     grid-template-columns: minmax(100px, 0.3fr) 1fr;
   }
 
+  &--with-icon {
+    input {
+      padding-right: 30px;
+    }
+  }
+
   &__label {
     font-weight: 500;
     color: var(--gray);
+  }
+
+  &__input-inner {
+    position: relative;
+  }
+
+  &__icon-wrap {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      stroke: var(--gray);
+    }
+
+    & + input {
+      padding-left: 40px;
+    }
   }
 }

@@ -5,9 +5,9 @@ import Select from '@/components/ui/forms/Select/Select'
 import { useActions } from '@/hooks/redux/useActions'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { FC } from 'react'
-// import GithubIcon from ''
-import './SocialItem.scss'
+import LinkIcon from '@icons/link.svg?react'
 import { useSocialIcons } from '@/hooks/common/useSocialIcons'
+import './SocialItem.scss'
 
 interface PropsType {
   title: string
@@ -34,7 +34,7 @@ const SocialItem: FC<PropsType> = () => {
         <Select options={options} icons={socialIconMap} onSelectOption={handleOptionClick} />
       </FormWrapper>
 
-      <FormWrapper title='Link'>
+      <FormWrapper title='Link' icon={<LinkIcon />}>
         <Input />
       </FormWrapper>
     </FormBox>

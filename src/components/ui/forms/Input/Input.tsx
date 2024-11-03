@@ -1,7 +1,8 @@
-import { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
+import type { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
 import './Input.scss'
 
 interface PropsType extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+
   className?: string
 }
 
