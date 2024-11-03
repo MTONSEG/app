@@ -4,7 +4,7 @@ import './Button.scss'
 interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string
   variant?: 'contained' | 'outlined'
-  iconType?: 'icon-none' | 'icon-mobile-only' | 'icon-mobile'
+  iconType?: 'default' | 'icon-mobile'
   isFullWidth?: boolean
 }
 
