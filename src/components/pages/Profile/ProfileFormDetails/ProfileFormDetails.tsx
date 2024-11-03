@@ -1,7 +1,7 @@
 import ProfileFormFields from '@/components/pages/Profile/ProfileFormDetails/ProfileFormFields/ProfileFormFields'
 import ProfileFormFile from '@/components/pages/Profile/ProfileFormDetails/ProfileFormFile/ProfileFormFile'
 import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
-import { FC } from 'react'
+import type { FC } from 'react'
 
 interface PropsType {}
 

@@ -1,7 +1,7 @@
+import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
 import Button from '@/components/ui/buttons/Button/Button'
 import SocialItem from '@/components/widgets/cards/SocialItem/SocialItem'
-import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/ProfileFormWrapper'
-import { FC } from 'react'
+import type { FC } from 'react'
 
 interface PropsType {}
 

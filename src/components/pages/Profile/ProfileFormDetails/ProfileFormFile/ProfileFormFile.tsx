@@ -1,7 +1,7 @@
 import FormBox from '@/components/ui/forms/FormBox/FormBox'
 import FormWrapper from '@/components/ui/forms/FormWrapper/FormWrapper'
 import InputFile from '@/components/ui/forms/InputFile/InputFile'
-import { ChangeEvent, FC, useState } from 'react'
+import { useState, type ChangeEvent, FC } from 'react'
 
 interface PropsType {}
 

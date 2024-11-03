@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react'
+import type { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react'
 import './Heading.scss'
 
 interface PropsType extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {

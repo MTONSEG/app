@@ -1,6 +1,6 @@
 import ProfileHeader from '@/components/pages/Profile/ProfileHeader/ProfileHeader'
 import { useVhFix } from '@/hooks/common/useVhFix'
-import { FC, ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
 import '../Profile.scss'
 
 interface PropsType {

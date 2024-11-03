@@ -1,5 +1,5 @@
 import { getActive } from '@/utils/getActive'
-import { FC } from 'react'
+import type { FC } from 'react'
 import './Avatar.scss'
 
 interface PropsType {

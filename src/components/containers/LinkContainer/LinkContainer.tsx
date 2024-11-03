@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
 import './LinkContainer.scss'
 

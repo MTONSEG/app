@@ -1,6 +1,6 @@
 import SelectOption from '@/components/ui/forms/Select/SelectOption/SelectOption'
 import useClickOutside from '@/hooks/common/useClickOutside'
-import { IOption } from '@/store/slices/social.slice'
+import type { IOption } from '@/store/slices/social.slice'
 import { getActive } from '@/utils/getActive'
 import { KeyboardEvent, ReactNode, useEffect, useState, type FC } from 'react'
 import './Select.scss'

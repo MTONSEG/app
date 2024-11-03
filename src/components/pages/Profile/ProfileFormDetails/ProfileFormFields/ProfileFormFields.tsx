@@ -1,7 +1,7 @@
 import FormBox from '@/components/ui/forms/FormBox/FormBox'
 import FormWrapper from '@/components/ui/forms/FormWrapper/FormWrapper'
 import Input from '@/components/ui/forms/Input/Input'
-import { FC } from 'react'
+import type { FC } from 'react'
 
 interface PropsType {}
 
