@@ -5,14 +5,19 @@ import { ChangeEvent, FC, useState } from 'react'
 
 interface PropsType {}
 
+type FileDataType = Record<'name' | 'src', string>
+
 const ProfileFormFile: FC<PropsType> = () => {
-  const [fileSrc, setFileSrc] = useState<string>('')
+  const [file, setFile] = useState<FileDataType>({
+    name: 'Image must be below 1024x1024px. Use PNG, JPG, or BMP format',
+    src: '',
+  })
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.currentTarget.files
 
     if (!files || !files[0]) {
-      setFileSrc('')
+      setFile({ name: '', src: '' })
       return
     }
 
@@ -27,7 +32,7 @@ const ProfileFormFile: FC<PropsType> = () => {
       const fileContent = eventReader.target.result
 
       if (typeof fileContent === 'string') {
-        setFileSrc(fileContent)
+        setFile(() => ({ name: file.name, src: fileContent }))
       }
     }
   }
@@ -37,8 +42,8 @@ const ProfileFormFile: FC<PropsType> = () => {
       <FormWrapper title='Profile picture' variant='grid'>
         <InputFile
           name='photo'
-          text='Image must be below 1024x1024px. Use PNG, JPG, or BMP format'
-          imageSrc={fileSrc}
+          text={file.name ? file.name : 'Image must be below 1024x1024px. Use PNG, JPG, or BMP format'}
+          imageSrc={file.src}
           onChange={handleChange}
           accept='.png, .jpeg, .jpg'
         />
