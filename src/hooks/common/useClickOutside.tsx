@@ -17,10 +17,10 @@ export default function useClickOutside<T extends HTMLElement>(
   }
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside, true)
+    document.addEventListener('mousedown', handleClickOutside, true)
 
     return () => {
-      document.removeEventListener('click', handleClickOutside, true)
+      document.removeEventListener('mousedown', handleClickOutside, true)
     }
   }, [ref])
 

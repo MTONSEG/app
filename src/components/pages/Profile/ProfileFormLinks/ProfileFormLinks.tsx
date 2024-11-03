@@ -20,6 +20,10 @@ const ProfileFormLinks: FC<PropsType> = () => {
       }
     >
       <SocialItem title='link 1' />
+      <SocialItem title='link 1' />
+      <SocialItem title='link 1' />
+      <SocialItem title='link 1' />
+      <SocialItem title='link 1' />
     </ProfileFormWrapper>
   )
 }

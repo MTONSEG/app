@@ -9,10 +9,16 @@
 }
 
 .header {
+  position: fixed;
+  top: var(--layout-gap);
+  left: 50%;
+  z-index: 11;
+  width: calc(100% - 30px);
   min-height: var(--header-height);
   padding: 15px;
   border-radius: 15px;
   background: white;
+  transform: translateX(-50%);
   box-shadow: 0 0 10px lightgrey;
 
   &__link-wrap {
@@ -29,13 +35,13 @@
     transition: all 0.2s;
 
     svg {
+      flex: 0 0 auto;
       width: 18px;
       height: 20px;
+      margin: 0 10px 0 0;
       fill: var(--gray);
       stroke: var(--gray);
       transition: all 0.2s;
-      margin: 0 10px 0 0;
-      flex: 0 0 auto;
     }
 
     &:focus {
@@ -73,12 +79,12 @@
   }
 
   @include media-down(md) {
-    position: fixed;
-    top: var(--layout-gap);
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 30px);
-    z-index: 11;
+    // position: fixed;
+    // top: var(--layout-gap);
+    // left: 50%;
+    // z-index: 11;
+    // width: calc(100% - 30px);
+    // transform: translateX(-50%);
   }
 
   @include media-down(sm) {

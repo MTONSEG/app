@@ -512,13 +512,6 @@
         "severity": "warning"
       }
     ],
-    "selector-max-type": [
-      0,
-      {
-        "severity": "warning",
-        "ignore": "compounded"
-      }
-    ],
     "selector-max-specificity": [
       "0,4,1",
       {
