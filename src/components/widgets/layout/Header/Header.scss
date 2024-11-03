@@ -18,6 +18,7 @@
 
   @include media-down(sm) {
     --header-height: 60px;
+    width: calc(100% - 20px);
     padding: 10px;
   }
 }

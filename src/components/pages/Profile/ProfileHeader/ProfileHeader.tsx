@@ -21,7 +21,7 @@ const ProfileHeader = () => {
 
       <LinkContainer links={links} />
 
-      <Button variant='outlined' className='header__link header__link--preview' onClick={() => navigate('/')}>
+      <Button iconType='mobile-view' variant='outlined' onClick={() => navigate('/')}>
         <EyeIcon /> <span>Preview</span>
       </Button>
     </Header>

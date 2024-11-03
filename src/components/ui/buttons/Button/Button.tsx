@@ -4,7 +4,7 @@ import './Button.scss'
 interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string
   variant?: 'contained' | 'outlined'
-  iconType?: 'default' | 'icon-mobile'
+  iconType?: 'default' | 'mobile-view'
   isFullWidth?: boolean
 }
 
@@ -13,11 +13,11 @@ const Button: FC<PropsType> = ({
   className = '',
   color = 'violet',
   variant = 'contained',
-  iconType = 'none',
+  iconType = 'default',
   isFullWidth,
   ...props
 }) => {
-  const classes = `${className} button button--${variant} ${isFullWidth ? 'button--full-width' : ''} button--${iconType}`
+  const classes = `${className} button button--${variant} button--${iconType} ${isFullWidth ? 'button--full-width' : ''} `
 
   return (
     <button className={classes} {...props}>

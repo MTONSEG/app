@@ -1,3 +1,5 @@
+@import '@media';
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -13,6 +15,14 @@
   background-color: var(--purple);
   transition: all 0.2s;
 
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--purple);
+    stroke: var(--purple);
+    transition: all 0.2s;
+  }
+
   &--outlined {
     border: 1px solid var(--purple);
     color: var(--purple);
@@ -23,16 +33,6 @@
     width: 100%;
   }
 
-  &--icon-mobile,
-  &--icon-mobile-only {
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--grey);
-      stroke: var(--grey);
-    }
-  }
-
   &:focus {
     box-shadow: 0 0 15px var(--purple-lighter);
   }
@@ -40,6 +40,11 @@
   @media (hover: hover) {
     &:hover {
       background-color: var(--purple-darkest);
+
+      svg {
+        fill: var(--white);
+        stroke: var(--white);
+      }
     }
 
     &--outlined {
@@ -47,6 +52,16 @@
         border: 1px solid transparent;
         color: var(--white);
         background-color: var(--purple);
+      }
+    }
+  }
+
+  @include media-down(sm) {
+    &--mobile-view {
+      min-width: 50px;
+
+      span {
+        display: none;
       }
     }
   }
