@@ -33,8 +33,6 @@ const Select: FC<PropsType> = ({ options, icons, onSelectOption }) => {
 
   const getIcon = (key: string): ReactNode | null => (icons && icons[key] ? icons[key] : null)
 
-  useEffect(() => {}, [options])
-
   return (
     <div ref={ref} className={`select ${getActive(isShow)}`}>
       <div className='select__head' onClick={handleOpen} tabIndex={0} onKeyDown={handleKeyDown}>

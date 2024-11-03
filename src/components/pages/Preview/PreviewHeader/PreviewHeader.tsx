@@ -1,5 +1,6 @@
 import Button from '@/components/ui/buttons/Button/Button'
 import Header from '@/components/widgets/layout/Header/Header'
+import { DICTIONARY } from '@/dictionaries'
 import EditorIcon from '@icons/settings.svg?react'
 import ShareIcon from '@icons/share.svg?react'
 import type { FC } from 'react'
@@ -14,12 +15,12 @@ const PreviewHeader: FC<PropsType> = () => {
     <Header>
       <Button variant='outlined' iconType='mobile-view' onClick={() => navigate('/profile')}>
         <EditorIcon />
-        <span>Back to Editor</span>
+        <span>{DICTIONARY['en'].back_to_editor}</span>
       </Button>
 
       <Button iconType='mobile-view'>
         <ShareIcon />
-        <span>Share Link</span>
+        <span>{DICTIONARY['en'].share_link}</span>
       </Button>
     </Header>
   )

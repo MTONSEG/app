@@ -7,7 +7,10 @@ interface PropsType {}
 
 const ProfileFormDetails: FC<PropsType> = () => {
   return (
-    <ProfileFormWrapper title='Profile Details' text='Add your to create a personal touch to your profile'>
+    <ProfileFormWrapper
+      title='Profile Details'
+      text='Add your to create a personal touch to your profile'
+    >
       <ProfileFormFile />
       <ProfileFormFields />
     </ProfileFormWrapper>

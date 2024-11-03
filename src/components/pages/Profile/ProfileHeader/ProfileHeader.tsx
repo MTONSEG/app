@@ -2,6 +2,7 @@ import LinkContainer from '@/components/containers/LinkContainer/LinkContainer'
 import Button from '@/components/ui/buttons/Button/Button'
 import Logo from '@/components/ui/common/Logo/Logo'
 import Header from '@/components/widgets/layout/Header/Header'
+import { DICTIONARY } from '@/dictionaries'
 import EyeIcon from '@icons/eye.svg?react'
 import LinkIcon from '@icons/link.svg?react'
 import ProfileIcon from '@icons/profile.svg?react'
@@ -22,7 +23,7 @@ const ProfileHeader = () => {
       <LinkContainer links={links} />
 
       <Button iconType='mobile-view' variant='outlined' onClick={() => navigate('/')}>
-        <EyeIcon /> <span>Preview</span>
+        <EyeIcon /> <span>{DICTIONARY['en'].preview}</span>
       </Button>
     </Header>
   )

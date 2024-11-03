@@ -1,10 +1,19 @@
 import Button from '@/components/ui/buttons/Button/Button'
 import Heading from '@/components/ui/typography/Heading/Heading'
 import Text from '@/components/ui/typography/Text/Text'
-import type { DetailedHTMLProps, FC, FormEvent, FormHTMLAttributes, ReactElement, ReactNode } from 'react'
+import type {
+  DetailedHTMLProps,
+  FC,
+  FormEvent,
+  FormHTMLAttributes,
+  ReactElement,
+  ReactNode,
+} from 'react'
 import '../Profile.scss'
+import { DICTIONARY } from '@/dictionaries'
 
-interface PropsType extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
+interface PropsType
+  extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
   title: string
   text: string
   children?: ReactNode
@@ -32,7 +41,7 @@ const ProfileFormWrapper: FC<PropsType> = ({ title, text, children, button, onSu
 
       <div className='profile-form-wrapper__footer'>
         <Button type='submit' className='profile-form-wrapper__save-btn'>
-          Save
+          {DICTIONARY['en'].save}
         </Button>
       </div>
     </form>

@@ -1,0 +1,24 @@
+{
+  "back_to_editor": "Back to Editor",
+  "share_link": "Share Link",
+  "enter_your_first_name": "Enter your first name",
+  "enter_your_last_name": "Enter your last name",
+  "enter_your_email": "Enter your Email",
+  "image_requirements": "Image must be below 1024x1024px. Use PNG, JPG, or BMP format",
+  "customize_your_links": "Customize your links",
+  "add_edit_remove_links": "Add/edit/remove links below and share all your profiles with the world",
+  "add_new_link": "Add new link",
+  "save": "Save",
+  "preview": "Preview",
+  "links": "Links",
+  "profile_details": "Profile Details",
+  "add_personal_touch": "Add your details to create a personal touch to your profile",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email": "Email",
+  "upload_image": "Upload Image",
+  "change_image": "Change Image",
+	"remove": "Remove",
+	"link":"Link"
+}
+
