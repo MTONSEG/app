@@ -1,7 +1,13 @@
-.input-file {
+@import '@media';
+
+.input-file,
+.input-file__custom,
+.input-file__placeholder {
   display: flex;
   align-items: center;
+}
 
+.input-file {
   &__input {
     position: absolute;
     z-index: -1;
@@ -15,8 +21,6 @@
   }
 
   &__custom {
-    display: flex;
-    align-items: center;
     justify-content: start;
     flex: 0 0 auto;
     width: 170px;
@@ -39,17 +43,15 @@
 
   &__placeholder {
     width: 100%;
-    display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     font-size: 14px;
     gap: 10px;
     color: var(--white);
     position: relative;
     z-index: 1;
-    background: rgba(59, 59, 59, 0.5);
+    background: var(--black-05);
 
     svg {
       width: 25px;
@@ -71,6 +73,23 @@
   &__text {
     color: var(--gray);
     font-size: 14px;
+    line-height: 1.2;
     max-width: 250px;
+  }
+
+  @include media-down(lg) {
+    &__custom {
+      margin: 0 10px 0 0;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @include media-down(xs) {
+    display: block;
+
+    &__custom { 
+      margin: 0 auto 15px;
+    }
   }
 }

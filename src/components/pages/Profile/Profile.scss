@@ -1,8 +1,16 @@
 @import '@media';
 
 .profile,
-.profile-form-wrapper {
+.profile-form-wrapper,
+.profile-form-wrapper__body,
+.profile-form-wrapper__footer,
+.profile-preview {
   display: flex;
+}
+
+.profile-preview {
+  align-items: center;
+  justify-content: center;
 }
 
 .profile {
@@ -44,7 +52,6 @@
 
   &__body {
     overflow-y: auto;
-    display: flex;
     flex-grow: 1;
     flex-direction: column;
     gap: 20px;
@@ -79,7 +86,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
@@ -97,9 +103,6 @@
 .profile-preview {
   max-width: 35%;
   min-width: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   &__icon-wrap {
     max-width: 300px;
@@ -115,10 +118,6 @@
 @include media-down(md) {
   .profile {
     flex: 1 1 auto;
-  }
-
-  .profile-form-wrapper {
-  
   }
 
   .profile-preview {

@@ -1,9 +1,14 @@
 @import '@media';
 
-.header {
+.header,
+.header__link,
+.header__link-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header {
   min-height: var(--header-height);
   padding: 15px;
   border-radius: 15px;
@@ -11,15 +16,10 @@
   box-shadow: 0 0 10px lightgrey;
 
   &__link-wrap {
-    display: flex;
-    align-items: center;
     gap: 5px;
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 40px;
     padding: 5px 15px;
     border-radius: 5px;

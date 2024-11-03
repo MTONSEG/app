@@ -1,16 +1,17 @@
 @import '@media';
 
-.logo {
+.logo,
+.logo__icon-wrap {
   display: flex;
   align-items: center;
+}
 
+.logo {
   &__icon-wrap {
     width: 30px;
     height: 30px;
     background: var(--purple);
     border-radius: 7px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     margin: 0 8px 0 0;
 
