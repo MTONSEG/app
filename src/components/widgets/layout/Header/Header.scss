@@ -82,8 +82,6 @@
   }
 
   @include media-down(sm) {
-    padding: 10px 15px;
-
     &__link {
       width: 50px;
       min-height: 35px;

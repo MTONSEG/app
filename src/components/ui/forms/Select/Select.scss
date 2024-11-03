@@ -4,8 +4,14 @@
   align-items: center;
   gap: 10px;
   padding: 10px;
-  color: black;
+  color: var(--dark);
   background: var(--white);
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--gray);
+  }
 }
 
 .select-option {
@@ -21,14 +27,22 @@
     border-color: transparent;
     font-weight: 600;
     color: var(--white);
-    background: var(--purple-darkest);
+    background: var(--purple);
+
+    svg {
+      fill: var(--white);
+    }
   }
 
   @media (hover: hover) {
     &:hover {
       border-color: transparent;
       color: var(--white);
-      background: var(--purple);
+      background: var(--purple-lighter);
+
+      svg {
+        fill: var(--white);
+      }
     }
   }
 }
@@ -42,20 +56,64 @@
     border-radius: 5px;
   }
 
+  &__head {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border: 2px solid var(--purple);
+      border-width: 0 2px 2px 0;
+      transform: translateY(-60%) rotate(45deg);
+      transition: transform 0.2s ease;
+    }
+
+    &:focus {
+      box-shadow: 0 0 15px var(--purple-lighter);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 0 15px var(--purple-lighter);
+      }
+    }
+  }
+
   &__options {
     overflow-y: auto;
     position: absolute;
     top: calc(100% + 2px);
     left: 0;
-    display: none;
+    opacity: 0;
+    z-index: -1;
     width: 100%;
     max-height: 120px;
     background: var(--white);
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
   }
 
   &.active {
+    & .select__head {
+      border-color: var(--purple);
+      box-shadow: 0 0 15px var(--purple-lighter);
+
+      &::after {
+        transform: translateY(-40%) rotate(225deg);
+      }
+    }
+
     & .select__options {
-      display: block;
+      pointer-events: all;
+      opacity: 1;
+      z-index: 1;
     }
   }
 }

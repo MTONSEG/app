@@ -1,11 +1,13 @@
+import FormBox from '@/components/ui/forms/FormBox/FormBox'
 import FormWrapper from '@/components/ui/forms/FormWrapper/FormWrapper'
 import Input from '@/components/ui/forms/Input/Input'
 import Select from '@/components/ui/forms/Select/Select'
 import { useActions } from '@/hooks/redux/useActions'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { FC } from 'react'
+// import GithubIcon from ''
 import './SocialItem.scss'
-import FormBox from '@/components/ui/forms/FormBox/FormBox'
+import { useSocialIcons } from '@/hooks/common/useSocialIcons'
 
 interface PropsType {
   title: string
@@ -13,7 +15,7 @@ interface PropsType {
 
 const SocialItem: FC<PropsType> = () => {
   const options = useAppSelector(state => state.social.options)
-
+  const { socialIconMap } = useSocialIcons()
   const { selectSocial } = useActions('social')
 
   const handleOptionClick = (id: string) => {
@@ -29,7 +31,7 @@ const SocialItem: FC<PropsType> = () => {
       </div>
 
       <FormWrapper title='Link'>
-        <Select options={options} onSelectOption={handleOptionClick} />
+        <Select options={options} icons={socialIconMap} onSelectOption={handleOptionClick} />
       </FormWrapper>
 
       <FormWrapper title='Link'>
