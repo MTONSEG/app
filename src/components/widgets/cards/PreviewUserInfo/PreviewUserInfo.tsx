@@ -16,7 +16,7 @@ const PreviewUserInfo: FC<PropsType> = ({ variant = 'phone' }) => {
       <div className='preview-user-info__body'>
         <div className='preview-user-info__user-info'>
           <Avatar size={variant === 'phone' ? 'xs' : 'md'} imageSrc='https://picsum.photos/200/300' />
-          <UserInfo size={variant === 'phone' ? 'xs' : 'md'} />
+          <UserInfo size={variant === 'phone' ? 'xs' : 'md'} name='Max Puzanov' email='test@gmail.com' />
         </div>
 
         <div className='preview-user-info__social-wrap'>
