@@ -61,7 +61,7 @@
 
   &__head {
     display: grid;
-    gap: 10px;
+    gap: 4px;
     margin: 0 0 30px;
   }
 
@@ -83,13 +83,7 @@
     }
   }
 
-  &__title {
-    font-size: 32px;
-    font-weight: 800;
-  }
-
   &__text {
-    font-size: 18px;
     color: var(--gray);
   }
 

@@ -1,4 +1,6 @@
 import Button from '@/components/ui/buttons/Button/Button'
+import Heading from '@/components/ui/typography/Heading/Heading'
+import Text from '@/components/ui/typography/Text/Text'
 import type { DetailedHTMLProps, FC, FormEvent, FormHTMLAttributes, ReactElement, ReactNode } from 'react'
 import '../Profile.scss'
 
@@ -15,8 +17,13 @@ const ProfileFormWrapper: FC<PropsType> = ({ title, text, children, button, onSu
   return (
     <form className='profile-form-wrapper' onSubmit={onSubmit}>
       <div className='profile-form-wrapper__head'>
-        <h1 className='profile-form-wrapper__title'>{title}</h1>
-        <p className='profile-form-wrapper__text'>{text}</p>
+        <Heading className='profile-form-wrapper__title' weight='bold'>
+          {title}
+        </Heading>
+
+        <Text className='profile-form-wrapper__text' component='p'>
+          {text}
+        </Text>
       </div>
 
       {!!button && <div className='profile-form-wrapper__btn-wrap'>{button}</div>}
