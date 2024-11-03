@@ -1,0 +1,11 @@
+.preview {
+  position: relative;
+
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 40px 50px;
+    background: var(--purple);
+  }
+}
