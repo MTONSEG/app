@@ -1,0 +1,33 @@
+.preview-user-info {
+  position: relative;
+  width: 300px;
+  height: 560px;
+  padding: 50px 30px 30px;
+
+  &__body {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__social-wrap {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__phone-svg,
+  &__phone-svg svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__phone-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    svg {
+      object-fit: contain;
+    }
+  }
+}

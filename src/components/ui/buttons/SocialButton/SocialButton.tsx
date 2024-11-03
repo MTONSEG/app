@@ -5,11 +5,11 @@ import './SocialButton.scss'
 interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string
   variant?: 'github' | 'linkedin' | 'youtube' | 'default'
+  size?: 'md' | 'xs'
   icon?: ReactNode
-  color?: string
-  textColor?: string
   isFullWidth?: boolean
   isArrow?: boolean
+  isSkeleton?: boolean
 }
 
 const SocialButton: FC<PropsType> = ({
@@ -17,11 +17,13 @@ const SocialButton: FC<PropsType> = ({
   className = '',
   variant = 'default',
   icon,
+  size = 'xs',
   isFullWidth,
+  isSkeleton,
   isArrow,
   ...props
 }) => {
-  const classes = `${className} social-btn social-btn--${variant} ${isFullWidth ? 'social-btn--full-width' : ''} ${isArrow ? 'social-btn--with-arrow' : ''}`
+  const classes = `${className} social-btn social-btn--${variant} ${isFullWidth ? 'social-btn--full-width' : ''} ${isArrow ? 'social-btn--with-arrow' : ''} social-btn--${size}`
 
   return (
     <button className={classes} {...props}>
