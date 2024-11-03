@@ -17,21 +17,21 @@
   }
 
   &__drag-btn {
+    position: relative;
     width: 24px;
     height: 30px;
-    position: relative;
     margin: 0 3px 0 0;
 
     &::after,
     &::before {
       content: '';
-      width: calc(100% - 8px);
-      height: 2px;
-      display: block;
-      background: var(--gray);
       position: absolute;
       top: 50%;
       left: 50%;
+      display: block;
+      width: calc(100% - 8px);
+      height: 2px;
+      background: var(--gray);
       transform: translate(-50%, -50%);
     }
 
@@ -45,8 +45,8 @@
   }
 
   &__btn {
-    font-size: 16px;
     padding: 5px 0;
+    font-size: 16px;
     font-weight: 500;
     color: var(--gray);
 

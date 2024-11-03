@@ -7,4 +7,8 @@
   gap: var(--layout-gap);
   height: var(--vh, 100vh);
   padding: var(--padding-top) var(--layout-padding) var(--layout-padding);
+
+  @include media-down(sm) {
+    --layout-padding: 10px;
+  }
 }

@@ -48,6 +48,16 @@
       box-shadow: 0 0 15px var(--purple-lighter);
     }
 
+    &--preview {
+      border: 1px solid var(--purple-darkest);
+      color: var(--purple-darkest);
+
+      svg {
+        display: none;
+        stroke: var(--purple-darkest);
+      }
+    }
+
     &.active {
       pointer-events: none;
       color: var(--purple-darkest);
@@ -61,16 +71,6 @@
       }
     }
 
-    &--preview {
-      border: 1px solid var(--purple-darkest);
-      color: var(--purple-darkest);
-
-      svg {
-        display: none;
-        stroke: var(--purple-darkest);
-      }
-    }
-
     @media (hover: hover) {
       &:hover {
         background: var(--purple-lightest);
@@ -78,16 +78,10 @@
     }
   }
 
-  @include media-down(md) {
-    // position: fixed;
-    // top: var(--layout-gap);
-    // left: 50%;
-    // z-index: 11;
-    // width: calc(100% - 30px);
-    // transform: translateX(-50%);
-  }
-
   @include media-down(sm) {
+    --header-height: 60px;
+    padding: 10px;
+
     &__link {
       width: 50px;
       min-height: 35px;
