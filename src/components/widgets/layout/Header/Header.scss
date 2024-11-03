@@ -78,7 +78,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 30px);
-    z-index: 1;
+    z-index: 11;
   }
 
   @include media-down(sm) {
@@ -93,10 +93,6 @@
       svg {
         display: block;
         margin: 0;
-      }
-
-      &--preview {
-        width: 40px;
       }
     }
   }

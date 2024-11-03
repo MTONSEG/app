@@ -124,3 +124,17 @@
     display: none;
   }
 }
+
+@include media-down(xs) {
+  .profile-form-wrapper {
+    padding: 20px 15px var(--padding-bottom);
+
+    &__footer {
+      padding: 15px;
+    }
+
+    &__save-btn {
+      width: 100%;
+    }
+  }
+}

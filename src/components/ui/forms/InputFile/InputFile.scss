@@ -88,8 +88,10 @@
   @include media-down(xs) {
     display: block;
 
-    &__custom { 
-      margin: 0 auto 15px;
+    &__custom {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 10px;
     }
   }
 }
