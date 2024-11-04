@@ -11,9 +11,17 @@ interface PropsType {
 const UserInfo: FC<PropsType> = ({ name, email, size = 'xs' }) => {
   return (
     <div className={`user-info user-info--${size} `}>
-      {!!name ? <p className='user-info__name'>{name}</p> : <Skeleton width='130px' height='15px' />}
+      {!!name ? (
+        <p className='user-info__name'>{name}</p>
+      ) : (
+        <Skeleton width='130px' height='15px' />
+      )}
 
-      {!!email ? <p className='user-info__email'>{email}</p> : <Skeleton width='100px' height='9px' />}
+      {!!email ? (
+        <p className='user-info__email'>{email}</p>
+      ) : (
+        <Skeleton width='100px' height='9px' />
+      )}
     </div>
   )
 }

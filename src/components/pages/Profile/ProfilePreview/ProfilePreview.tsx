@@ -11,6 +11,13 @@ import { useEffect, useState } from 'react'
 
 const ProfilePreview = () => {
   const links = useAppSelector(state => state.user.links)
+  const photo = useAppSelector(state => state.user.photo)
+  const firstName = useAppSelector(state => state.user.firstName)
+  const lastName = useAppSelector(state => state.user.lastName)
+  const email = useAppSelector(state => state.user.email)
+
+  const name = firstName || lastName ? `${firstName} ${lastName}`.trim() : ''
+
   const [skeletonList, setSkeletonList] = useState<null[]>([])
   const { socialIconMap } = useSocialIcons()
 
@@ -25,8 +32,8 @@ const ProfilePreview = () => {
     <div className='profile-preview' style={{ flexDirection: 'column' }}>
       <PhonePreview>
         <UserInfoContainer>
-          <Avatar imageSrc='https://picsum.photos/200/300' />
-          <UserInfo name='Max Puzanov' email='test@gmail.com' />
+          <Avatar imageSrc={photo.src} />
+          <UserInfo name={name} email={email} />
         </UserInfoContainer>
 
         <SocialContainer>

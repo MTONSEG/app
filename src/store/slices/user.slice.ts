@@ -3,6 +3,13 @@ import { generateID } from '@/utils/generateID'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState: IUserState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  photo: {
+    src: '',
+    name: '',
+  },
   links: [],
   options: [
     {
@@ -58,6 +65,18 @@ const userSlice = createSlice({
           link.url = value
         }
       })
+    },
+    setPhoto(state, action: PayloadAction<{ name: string; src: string }>) {
+      state.photo = action.payload
+    },
+    setFirstName(state, action: PayloadAction<string>) {
+      state.firstName = action.payload
+    },
+    setLastName(state, action: PayloadAction<string>) {
+      state.lastName = action.payload
+    },
+    setEmail(state, action: PayloadAction<string>) {
+      state.email = action.payload
     },
   },
 })

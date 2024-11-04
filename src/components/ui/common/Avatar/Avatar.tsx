@@ -7,16 +7,23 @@ interface PropsType {
   imageSrc?: string
   size?: 'md' | 'xs'
   isPlaceholder?: boolean
+  alt?: string
 }
 
-const Avatar: FC<PropsType> = ({ imageSrc, size = 'xs', className = '', isPlaceholder }) => {
+const Avatar: FC<PropsType> = ({
+  imageSrc,
+  size = 'xs',
+  className = '',
+  alt = 'photo',
+  isPlaceholder,
+}) => {
   const classes = `${className} avatar ${getActive(!!imageSrc)} avatar--${size} ${isPlaceholder ? 'user-info--with-placeholder' : ''}`
 
   return (
     <div className={classes}>
       {!!imageSrc && (
         <div className='avatar__border'>
-          <img width={150} height={150} src={imageSrc} alt='avatar' />
+          <img width={150} height={150} src={imageSrc} alt={alt} />
         </div>
       )}
     </div>

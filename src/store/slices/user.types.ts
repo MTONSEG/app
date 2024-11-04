@@ -1,4 +1,11 @@
 export interface IUserState {
+  firstName: string
+  lastName: string
+  email: string
+  photo: {
+    src: string
+    name: string
+  }
   options: IOption[]
   links: ISocialLink[]
 }

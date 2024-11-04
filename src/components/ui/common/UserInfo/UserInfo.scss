@@ -9,8 +9,14 @@
 
   &__name,
   &__email {
+    overflow: hidden;
+    display: -webkit-box;
     line-height: 1.2;
     word-break: break-all;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
   }
 
   &__name {
