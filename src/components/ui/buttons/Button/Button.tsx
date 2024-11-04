@@ -1,7 +1,8 @@
 import type { ButtonHTMLAttributes, DetailedHTMLProps, FC } from 'react'
 import './Button.scss'
 
-interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface PropsType
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string
   variant?: 'contained' | 'outlined'
   iconType?: 'default' | 'mobile-view'

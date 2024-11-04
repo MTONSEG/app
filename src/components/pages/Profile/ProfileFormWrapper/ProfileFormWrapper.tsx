@@ -18,7 +18,6 @@ interface PropsType
   text: string
   children?: ReactNode
   button?: ReactElement<HTMLButtonElement>
-  handleSave?: () => void
   onSubmit?: (e: FormEvent<HTMLFormElement>) => void
 }
 

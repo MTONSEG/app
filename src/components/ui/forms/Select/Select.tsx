@@ -1,25 +1,26 @@
 import SelectOption from '@/components/ui/forms/Select/SelectOption/SelectOption'
 import useClickOutside from '@/hooks/common/useClickOutside'
-import type { IOption } from '@/store/slices/social.slice'
 import { getActive } from '@/utils/getActive'
-import { KeyboardEvent, ReactNode, useEffect, useState, type FC } from 'react'
+import { KeyboardEvent, ReactNode, useState, type FC } from 'react'
 import './Select.scss'
+import { IOption } from '@/store/slices/user.types'
 
 interface PropsType {
+  selectedId?: string
   options: IOption[]
   icons?: Record<string, ReactNode>
-  onSelectOption: (id: string) => void
+  onSelectOption: (option: IOption | null) => void
 }
 
-const Select: FC<PropsType> = ({ options, icons, onSelectOption }) => {
+const Select: FC<PropsType> = ({ selectedId, options, icons, onSelectOption }) => {
   const [currentOption, setCurrentOption] = useState<IOption | null>(null)
   const { ref, isShow, setIsShow } = useClickOutside<HTMLDivElement>(false)
 
   const handleOptionClick = (id: string) => {
-    const option = options.find(el => el.id === id)
+    const option = options.find(el => el.id === id) || null
 
-    onSelectOption(id)
-    setCurrentOption(option ? option : null)
+    setCurrentOption(option)
+    onSelectOption(option)
     setIsShow(false)
   }
 
@@ -48,7 +49,11 @@ const Select: FC<PropsType> = ({ options, icons, onSelectOption }) => {
 
       <ul className='select__options'>
         {options.map(option => (
-          <SelectOption key={option.id} isSelect={option.selected} onClick={() => handleOptionClick(option.id)}>
+          <SelectOption
+            key={option.id}
+            isSelect={option.id === selectedId}
+            onClick={() => handleOptionClick(option.id)}
+          >
             {getIcon(option.value)}
             <span>{option.title}</span>
           </SelectOption>

@@ -1,9 +1,9 @@
-import { socialReducer } from '@/store/slices/social.slice'
+import { userReducer } from '@/store/slices/user.slice'
 import { configureStore } from '@reduxjs/toolkit'
 
 export const store = configureStore({
   reducer: {
-    social: socialReducer,
+    user: userReducer,
   },
 })
 

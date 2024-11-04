@@ -4,23 +4,36 @@ import Input from '@/components/ui/forms/Input/Input'
 import Select from '@/components/ui/forms/Select/Select'
 import { DICTIONARY } from '@/dictionaries'
 import { useSocialIcons } from '@/hooks/common/useSocialIcons'
-import { useActions } from '@/hooks/redux/useActions'
-import { useAppSelector } from '@/hooks/redux/useTypedRedux'
+import { IOption } from '@/store/slices/user.types'
 import LinkIcon from '@icons/link.svg?react'
 import type { FC } from 'react'
 import './SocialItem.scss'
 
 interface PropsType {
+  id: string
+  optionId: string | undefined
   title: string
+  url: string
+  options: IOption[]
+  onChangeUrl: (id: string, value: string) => void
+  onRemove: (id: string) => void
+  onSocialSelect: (id: string, option: IOption | null) => void
 }
 
-const SocialItem: FC<PropsType> = ({ title }) => {
-  const options = useAppSelector(state => state.social.options)
+const SocialItem: FC<PropsType> = ({
+  id,
+  optionId,
+  title,
+  url,
+  options,
+  onChangeUrl,
+  onRemove,
+  onSocialSelect,
+}) => {
   const { socialIconMap } = useSocialIcons()
-  const { selectSocial } = useActions('social')
 
-  const handleOptionClick = (id: string) => {
-    selectSocial({ id })
+  const handelSelectSocial = (option: IOption | null) => {
+    onSocialSelect(id, option)
   }
 
   return (
@@ -31,15 +44,22 @@ const SocialItem: FC<PropsType> = ({ title }) => {
           <span>{title}</span>
         </p>
 
-        <button className='social-item__btn'>{DICTIONARY['en'].remove}</button>
+        <button type='button' className='social-item__btn' onClick={() => onRemove(id)}>
+          {DICTIONARY['en'].remove}
+        </button>
       </div>
 
       <FormWrapper title='Link'>
-        <Select options={options} icons={socialIconMap} onSelectOption={handleOptionClick} />
+        <Select
+          selectedId={optionId}
+          options={options}
+          icons={socialIconMap}
+          onSelectOption={handelSelectSocial}
+        />
       </FormWrapper>
 
       <FormWrapper title='Link' icon={<LinkIcon />}>
-        <Input />
+        <Input type='text' value={url} onChange={e => onChangeUrl(id, e.currentTarget.value)} />
       </FormWrapper>
     </FormBox>
   )

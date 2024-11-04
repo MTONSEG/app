@@ -26,6 +26,14 @@
     transition: all 0.2s;
   }
 
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    border-color: var(--gray-light);
+    color: var(--gray);
+    background: var(--gray-light);
+  }
+
   &--outlined {
     border: 1px solid var(--purple);
     color: var(--purple);
