@@ -135,6 +135,10 @@
 }
 
 @include media-down(sm) {
+  .profile {
+    min-height: 450px;
+  }
+
   .profile-layout {
     --layout-padding: 10px;
   }
