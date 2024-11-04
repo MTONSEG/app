@@ -4,10 +4,10 @@ import { ToastType } from '@/types/common.types'
 import ErrorIcon from '@icons/error.svg?react'
 import SaveIcon from '@icons/save.svg?react'
 import WarningIcon from '@icons/warning.svg?react'
-import React, { ReactNode, useEffect } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import './Toast.scss'
 
-const Toast: React.FC = () => {
+const Toast = () => {
   const { message, type, isVisible } = useAppSelector(state => state.toast)
   const { hideToast } = useActions('toast')
 

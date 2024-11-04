@@ -2,6 +2,7 @@ import LinkContainer from '@/components/containers/LinkContainer/LinkContainer'
 import Button from '@/components/ui/buttons/Button/Button'
 import Logo from '@/components/ui/common/Logo/Logo'
 import Header from '@/components/widgets/layout/Header/Header'
+import { PATH } from '@/constants'
 import { DICTIONARY } from '@/dictionaries'
 import EyeIcon from '@icons/eye.svg?react'
 import LinkIcon from '@icons/link.svg?react'
@@ -12,8 +13,12 @@ const ProfileHeader = () => {
   const navigate = useNavigate()
 
   const links = [
-    { to: '/profile', icon: <LinkIcon />, label: 'Links' },
-    { to: '/profile/details', icon: <ProfileIcon />, label: 'Profile Details' },
+    { to: `/${PATH.PROFILE}`, icon: <LinkIcon />, label: DICTIONARY['en'].links },
+    {
+      to: `/${PATH.PROFILE}/${PATH.DETAILS}`,
+      icon: <ProfileIcon />,
+      label: DICTIONARY['en'].profile_details,
+    },
   ]
 
   return (

@@ -1,4 +1,4 @@
-import { IOption, ISocialLink, IUserState } from '@/store/slices/userSlice/user.types'
+import type { IOption, ISocialLink, IUserState } from '@/store/slices/userSlice/user.types'
 import { generateID } from '@/utils/generateID'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 

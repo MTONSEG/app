@@ -30,3 +30,5 @@ test
 svgs
 localhost-key.pem
 localhost.pem
+
+.env

@@ -6,11 +6,7 @@ interface PropsType {
 }
 
 const Header: FC<PropsType> = ({ children }) => {
-  return (
-    <header className='header'>
-      {children}
-    </header>
-  )
+  return <header className='header'>{children}</header>
 }
 
 export default Header

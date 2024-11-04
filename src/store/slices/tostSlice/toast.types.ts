@@ -1,4 +1,4 @@
-import { ToastType } from '@/types/common.types'
+import type { ToastType } from '@/types/common.types'
 
 export interface IToastState {
   message: string
