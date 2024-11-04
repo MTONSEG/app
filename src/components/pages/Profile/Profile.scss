@@ -110,6 +110,22 @@
   &__btn-wrap {
     margin: 0 0 20px;
   }
+
+  &--to-right {
+    & .profile-form-wrapper__head,
+    & .profile-form-wrapper__body,
+    & .profile-form-wrapper__btn-wrap {
+      animation: showLeftToRight 0.2s linear forwards;
+    }
+  }
+
+  &--to-left {
+    & .profile-form-wrapper__head,
+    & .profile-form-wrapper__body,
+    & .profile-form-wrapper__btn-wrap {
+      animation: showRightToLeft 0.2s linear forwards;
+    }
+  }
 }
 
 @include media-down(md) {
