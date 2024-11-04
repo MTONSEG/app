@@ -14,4 +14,12 @@
   ```bash
   yarn install
 
+- **Запуск dev**
+  ```bash
+  yarn dev
+
+**Собрать проект**
+  ```bash
+  yarn build
+
   
