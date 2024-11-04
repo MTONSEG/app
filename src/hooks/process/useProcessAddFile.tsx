@@ -1,8 +1,9 @@
+import { DICTIONARY } from '@/dictionaries'
 import { useActions } from '@/hooks/redux/useActions'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { ChangeEvent } from 'react'
 
-export const useProcessFile = () => {
+export const useProcessAddFile = () => {
   const photo = useAppSelector(state => state.user.photo)
 
   const { setPhoto } = useActions('user')

@@ -2,7 +2,7 @@ import ProfileFormWrapper from '@/components/pages/Profile/ProfileFormWrapper/Pr
 import Button from '@/components/ui/buttons/Button/Button'
 import SocialItem from '@/components/widgets/cards/SocialItem/SocialItem'
 import { DICTIONARY } from '@/dictionaries'
-import { useProcessLink } from '@/hooks/process/useProcessLink'
+import { useProcessAddLink } from '@/hooks/process/useProcessAddLink'
 
 const ProfileFormLinks = () => {
   const {
@@ -13,7 +13,7 @@ const ProfileFormLinks = () => {
     handelSelectSocial,
     handleSubmit,
     handleChangeUrl,
-  } = useProcessLink()
+  } = useProcessAddLink()
 
   return (
     <ProfileFormWrapper

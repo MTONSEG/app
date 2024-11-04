@@ -3,7 +3,7 @@ import useClickOutside from '@/hooks/common/useClickOutside'
 import { getActive } from '@/utils/getActive'
 import { KeyboardEvent, ReactNode, useState, type FC } from 'react'
 import './Select.scss'
-import { IOption } from '@/store/slices/user.types'
+import { IOption } from '@/store/slices/userSlice/user.types'
 import { SocialIconType } from '@/types/common.types'
 
 interface PropsType {

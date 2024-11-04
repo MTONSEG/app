@@ -1,4 +1,5 @@
 import ProfileHeader from '@/components/pages/Profile/ProfileHeader/ProfileHeader'
+import Toast from '@/components/widgets/popup/Tost/Toast'
 import { useVhFix } from '@/hooks/common/useVhFix'
 import type { FC, ReactNode } from 'react'
 import '../Profile.scss'
@@ -15,6 +16,8 @@ const ProfileLayout: FC<PropsType> = ({ children }) => {
       <ProfileHeader />
 
       {children}
+
+      <Toast />
     </div>
   )
 }

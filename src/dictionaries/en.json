@@ -18,7 +18,7 @@
   "email": "Email",
   "upload_image": "Upload Image",
   "change_image": "Change Image",
-	"remove": "Remove",
-	"link":"Link"
+  "remove": "Remove",
+  "link": "Link",
+  "your_changes_successfully": "Your changes have been successfully saved!"
 }
-

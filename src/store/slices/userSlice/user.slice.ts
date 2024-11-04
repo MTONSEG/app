@@ -1,4 +1,4 @@
-import { ILinkOption, ISocialLink, IUserState } from '@/store/slices/user.types'
+import { IOption, ISocialLink, IUserState } from '@/store/slices/userSlice/user.types'
 import { generateID } from '@/utils/generateID'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
@@ -46,7 +46,7 @@ const userSlice = createSlice({
     removeLink(state, action: PayloadAction<{ id: string }>) {
       state.links = state.links.filter(link => link.id !== action.payload.id)
     },
-    setSocial(state, action: PayloadAction<ILinkOption>) {
+    setSocial(state, action: PayloadAction<{ id: string; option: IOption | null }>) {
       const { id, option } = action.payload
 
       state.links = state.links.map(link => {

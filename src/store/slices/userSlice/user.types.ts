@@ -22,7 +22,3 @@ export interface ISocialLink {
   option: IOption | null
 }
 
-export interface ILinkOption {
-  id: string
-  option: IOption | null
-}

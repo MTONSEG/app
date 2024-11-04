@@ -17,3 +17,13 @@
     transform: translateX(0);
   }
 }
+
+@keyframes showToast {
+  0% {
+    transform: translate(-50%, 200%);
+  }
+
+  100% {
+    transform: translate(-50%, -30px);
+  }
+}
