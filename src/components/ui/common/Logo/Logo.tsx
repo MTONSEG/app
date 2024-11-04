@@ -1,10 +1,7 @@
 import LogoIcon from '@icons/link-gorisontal.svg?react'
-import type { FC } from 'react'
 import './Logo.scss'
 
-interface PropsType {}
-
-const Logo: FC<PropsType> = () => {
+const Logo = () => {
   return (
     <div className='logo'>
       <div className='logo__icon-wrap'>

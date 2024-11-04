@@ -8,12 +8,11 @@ import PreviewCard from '@/components/widgets/cards/PreviewCard/PreviewCard'
 import { useSocialIcons } from '@/hooks/common/useSocialIcons'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { getFullName } from '@/utils/getFullName'
-import type { FC } from 'react'
 import './Preview.scss'
 
-interface PropsType {}
 
-const Preview: FC<PropsType> = () => {
+
+const Preview = () => {
   const { links, photo, firstName, lastName, email } = useAppSelector(state => state.user)
   const { socialIconMap } = useSocialIcons()
 
