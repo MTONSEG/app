@@ -17,6 +17,16 @@
     color: var(--gray);
   }
 
+  &.is-error {
+    border-color: var(--social-red);
+    color: var(--social-red);
+  }
+
+  &.is-disable {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 0 15px var(--purple-lighter);
