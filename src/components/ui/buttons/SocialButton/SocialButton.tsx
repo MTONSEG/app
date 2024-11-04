@@ -2,9 +2,10 @@ import ArrowIcon from '@icons/arrow-right.svg?react'
 import type { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from 'react'
 import './SocialButton.scss'
 
-interface PropsType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface PropsType
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string
-  variant?: 'github' | 'linkedin' | 'youtube' | 'default'
+  variant?: 'github' | 'linkedin' | 'youtube' | 'default' | string
   size?: 'md' | 'xs'
   icon?: ReactNode
   isFullWidth?: boolean

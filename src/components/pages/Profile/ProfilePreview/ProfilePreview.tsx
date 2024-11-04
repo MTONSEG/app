@@ -5,13 +5,14 @@ import Avatar from '@/components/ui/common/Avatar/Avatar'
 import Skeleton from '@/components/ui/common/Skeleton/Skeleton'
 import UserInfo from '@/components/ui/common/UserInfo/UserInfo'
 import PhonePreview from '@/components/widgets/cards/PhonePreview/PhonePreview'
+import { useSocialIcons } from '@/hooks/common/useSocialIcons'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
-import GithubIcon from '@icons/github.svg?react'
 import { useEffect, useState } from 'react'
 
 const ProfilePreview = () => {
   const links = useAppSelector(state => state.user.links)
   const [skeletonList, setSkeletonList] = useState<null[]>([])
+  const { socialIconMap } = useSocialIcons()
 
   useEffect(() => {
     const counter = links.reduce((acc, link) => acc + (link.option ? 1 : 0), 0)
@@ -32,7 +33,13 @@ const ProfilePreview = () => {
           {links?.map(link => {
             if (link.option)
               return (
-                <SocialButton variant='github' icon={<GithubIcon />} isArrow isFullWidth>
+                <SocialButton
+                  key={link.id}
+                  icon={socialIconMap[link.option.value]?.icon}
+                  variant={link.option?.value}
+                  isArrow
+                  isFullWidth
+                >
                   {link.option?.title}
                 </SocialButton>
               )

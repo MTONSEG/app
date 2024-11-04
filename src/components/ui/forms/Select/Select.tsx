@@ -4,11 +4,12 @@ import { getActive } from '@/utils/getActive'
 import { KeyboardEvent, ReactNode, useState, type FC } from 'react'
 import './Select.scss'
 import { IOption } from '@/store/slices/user.types'
+import { SocialIconType } from '@/types/common.types'
 
 interface PropsType {
   selectedId?: string
   options: IOption[]
-  icons?: Record<string, ReactNode>
+  icons?: SocialIconType
   onSelectOption: (option: IOption | null) => void
 }
 
@@ -32,7 +33,8 @@ const Select: FC<PropsType> = ({ selectedId, options, icons, onSelectOption }) =
     if (e.key === 'Enter') handleOpen()
   }
 
-  const getIcon = (key: string): ReactNode | null => (icons && icons[key] ? icons[key] : null)
+  const getIcon = (key: string): ReactNode | null =>
+    icons && icons[key].icon ? icons[key].icon : null
 
   return (
     <div ref={ref} className={`select ${getActive(isShow)}`}>
