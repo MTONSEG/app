@@ -30,7 +30,6 @@ const ProfileFormFields = () => {
           type='text'
           name='lastName'
           value={lastName}
-          isError
           onChange={e => setLastName(e.currentTarget.value)}
           aria-label={DICTIONARY['en'].enter_your_last_name}
           placeholder={DICTIONARY['en'].enter_your_last_name}

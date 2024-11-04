@@ -19,7 +19,6 @@ const ProfileFormLinks = () => {
     <ProfileFormWrapper
       title={DICTIONARY['en'].customize_your_links}
       text={DICTIONARY['en'].add_edit_remove_links}
-      animation='to-left'
       onSubmit={handleSubmit}
       button={
         <Button

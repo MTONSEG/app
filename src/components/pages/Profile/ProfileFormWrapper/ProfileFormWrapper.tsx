@@ -16,7 +16,6 @@ interface PropsType
   extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
   title: string
   text: string
-  animation?: 'to-left' | 'to-right' | 'none'
   children?: ReactNode
   button?: ReactElement<HTMLButtonElement>
   onSubmit?: (e: FormEvent<HTMLFormElement>) => void
@@ -27,11 +26,10 @@ const ProfileFormWrapper: FC<PropsType> = ({
   text,
   children,
   button,
-  animation = 'none',
   onSubmit,
 }) => {
   return (
-    <form className={`profile-form-wrapper profile-form-wrapper--${animation}`} onSubmit={onSubmit}>
+    <form className={`profile-form-wrapper`} onSubmit={onSubmit}>
       <div className='profile-form-wrapper__head'>
         <Heading className='profile-form-wrapper__title' weight='bold'>
           {title}

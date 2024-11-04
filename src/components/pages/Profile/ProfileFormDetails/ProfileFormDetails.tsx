@@ -16,7 +16,6 @@ const ProfileFormDetails = () => {
 
   return (
     <ProfileFormWrapper
-      animation='to-right'
       title='Profile Details'
       text='Add your to create a personal touch to your profile'
       onSubmit={handleSubmit}
