@@ -27,7 +27,7 @@ const ProfileFormLinks = () => {
           variant='outlined'
           isFullWidth
           onClick={handleAddLink}
-          disabled={links.length > 4}
+          disabled={links.length > 2}
         >
           &#43; {DICTIONARY['en'].add_new_link}
         </Button>

@@ -7,6 +7,7 @@ import UserInfo from '@/components/ui/common/UserInfo/UserInfo'
 import PhonePreview from '@/components/widgets/cards/PhonePreview/PhonePreview'
 import { useSocialIcons } from '@/hooks/common/useSocialIcons'
 import { useAppSelector } from '@/hooks/redux/useTypedRedux'
+import { getFullName } from '@/utils/getFullName'
 import { useEffect, useState } from 'react'
 
 const ProfilePreview = () => {
@@ -16,14 +17,12 @@ const ProfilePreview = () => {
   const lastName = useAppSelector(state => state.user.lastName)
   const email = useAppSelector(state => state.user.email)
 
-  const name = firstName || lastName ? `${firstName} ${lastName}`.trim() : ''
-
   const [skeletonList, setSkeletonList] = useState<null[]>([])
   const { socialIconMap } = useSocialIcons()
 
   useEffect(() => {
     const counter = links.reduce((acc, link) => acc + (link.option ? 1 : 0), 0)
-    const fakeList: null[] = new Array(5 - counter).fill(null)
+    const fakeList: null[] = new Array(3 - counter).fill(null)
 
     setSkeletonList([...fakeList])
   }, [links])
@@ -33,7 +32,7 @@ const ProfilePreview = () => {
       <PhonePreview>
         <UserInfoContainer>
           <Avatar imageSrc={photo.src} />
-          <UserInfo name={name} email={email} />
+          <UserInfo name={getFullName({ firstName, lastName })} email={email} />
         </UserInfoContainer>
 
         <SocialContainer>

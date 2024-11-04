@@ -5,13 +5,18 @@ import SocialButton from '@/components/ui/buttons/SocialButton/SocialButton'
 import Avatar from '@/components/ui/common/Avatar/Avatar'
 import UserInfo from '@/components/ui/common/UserInfo/UserInfo'
 import PreviewCard from '@/components/widgets/cards/PreviewCard/PreviewCard'
-import GithubIcon from '@icons/github.svg?react'
+import { useSocialIcons } from '@/hooks/common/useSocialIcons'
+import { useAppSelector } from '@/hooks/redux/useTypedRedux'
+import { getFullName } from '@/utils/getFullName'
 import type { FC } from 'react'
 import './Preview.scss'
 
 interface PropsType {}
 
 const Preview: FC<PropsType> = () => {
+  const { links, photo, firstName, lastName, email } = useAppSelector(state => state.user)
+  const { socialIconMap } = useSocialIcons()
+
   return (
     <div className='preview'>
       <PreviewHeader />
@@ -19,22 +24,26 @@ const Preview: FC<PropsType> = () => {
       <main className='preview__hero'>
         <PreviewCard className='preview__card'>
           <UserInfoContainer>
-            <Avatar size='md' imageSrc='https://picsum.photos/200/300' />
-            <UserInfo size='md' name='Max Puzanov' email='test@gmail.com' />
+            <Avatar size='md' imageSrc={photo.src} />
+            <UserInfo size='md' name={getFullName({ firstName, lastName })} email={email} />
           </UserInfoContainer>
 
           <SocialContainer>
-            <SocialButton size='md' variant='github' icon={<GithubIcon />} isArrow isFullWidth>
-              Github
-            </SocialButton>
-
-            <SocialButton size='md' variant='youtube' icon={<GithubIcon />} isArrow isFullWidth>
-              Github
-            </SocialButton>
-
-            <SocialButton size='md' variant='linkedin' icon={<GithubIcon />} isArrow isFullWidth>
-              Github
-            </SocialButton>
+            {links?.map(
+              link =>
+                !!link.option && (
+                  <SocialButton
+                    key={link.id}
+                    size='md'
+                    variant={link.option.value}
+                    icon={socialIconMap[link.option.value]?.icon}
+                    isArrow
+                    isFullWidth
+                  >
+                    {link.option?.title}
+                  </SocialButton>
+                )
+            )}
           </SocialContainer>
         </PreviewCard>
       </main>
