@@ -2,10 +2,10 @@ import FormBox from '@/components/ui/forms/FormBox/FormBox'
 import FormWrapper from '@/components/ui/forms/FormWrapper/FormWrapper'
 import InputFile from '@/components/ui/forms/InputFile/InputFile'
 import { DICTIONARY } from '@/dictionaries'
-import { useProcessAddFile } from '@/hooks/process/useProcessAddFile'
+import { useProcessFiles } from '@/hooks/process/useProcessFiles'
 
 const ProfileFormFile = () => {
-  const { photo, handleChange } = useProcessAddFile()
+  const { photo, handleChange } = useProcessFiles()
 
   return (
     <FormBox>

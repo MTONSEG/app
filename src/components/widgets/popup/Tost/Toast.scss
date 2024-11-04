@@ -6,9 +6,10 @@
   align-items: center;
   z-index: 999;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   padding: 10px;
   border-radius: 10px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--white);
   background: var(--black);
@@ -21,4 +22,12 @@
     margin: 0 5px 2px 0;
     fill: var(--white);
   }
+
+	&--warning {
+		background: var(--orange-dark);
+	}
+
+	&--error {
+		background: var(--social-red);
+	}
 }

@@ -11,6 +11,11 @@ const ProfileFormDetails = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    console.log(formData)
+
     showToast(DICTIONARY['en'].your_changes_successfully, 'success')
   }
 

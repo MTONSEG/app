@@ -59,7 +59,12 @@ const SocialItem: FC<PropsType> = ({
       </FormWrapper>
 
       <FormWrapper title='Link' icon={<LinkIcon />}>
-        <Input type='text' value={url} onChange={e => onChangeUrl(id, e.currentTarget.value)} />
+        <Input
+          type='text'
+          value={url}
+          onChange={e => onChangeUrl(id, e.currentTarget.value)}
+          aria-label='url social'
+        />
       </FormWrapper>
     </FormBox>
   )

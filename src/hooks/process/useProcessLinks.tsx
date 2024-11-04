@@ -5,7 +5,7 @@ import { useAppSelector } from '@/hooks/redux/useTypedRedux'
 import { IOption } from '@/store/slices/userSlice/user.types'
 import { FormEvent } from 'react'
 
-export const useProcessAddLink = () => {
+export const useProcessLinks = () => {
   const links = useAppSelector(state => state.user.links)
   const options = useAppSelector(state => state.user.options)
   const showToast = useToast()
